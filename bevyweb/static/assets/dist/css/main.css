@@ -1,0 +1,298 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+/* footer{
+    position: absolute;
+    bottom: 0%;
+} */
+
+#slider_caption{
+    font-size:smaller;
+}
+
+/* .g_divide{
+    background-color: #F8AC4D;
+    height: 96px;
+    color:#fff;
+    position: relative;
+} */
+
+.mobilenav {
+    overflow: hidden;
+    background-color: #260970;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .mobilenav #navlinks{
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .mobilenav a {
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  .mobilenav #navlinks li a ul li a:hover{
+    background-color: #260970;
+  }
+  
+  /* Style the hamburger menu */
+  .mobilenav a.icon {
+    background: rgb(229, 158, 4);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .mobilenav a:hover {
+    background-color: #dddddd;
+    color: #fff;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #260970;
+    color: white;
+  }
+
+.int{
+    margin-top: -3%;
+    position: relative;
+    z-index: 5;
+    left:3%;
+
+}
+
+.didv{
+    position: relative;
+
+}
+
+.int1, .int3{
+    width: 17%;
+    border:none;
+    border-radius: 4%;
+}
+
+.int3{
+    width: 22% !important;
+}
+
+.int2{
+    width: 34%;
+    border:none;
+    border-radius: 4%;  
+}
+
+.int1 h2, .int2 h2, .int3 h2{
+    color: #260970;
+    font-size: large;
+}
+
+#maps{
+    margin-top:-11%;
+    position: relative;
+}
+
+.more{
+    float: right;
+    text-decoration: none;
+    color:#260970;
+    position: relative;
+    top: -8%;
+    right:5%
+}
+
+.featured{
+    position: relative;
+    left:3%;
+}
+
+#events{
+    color: #260970;
+}
+
+.home_video{
+    position: relative;
+}
+
+.home_video video{
+    border: none;
+    width:70%;
+    height:70vh;
+    position: relative;
+    left:16%;
+}
+
+.new_video{
+    border: none;
+    width:48%;
+    height:50vh;
+    position: relative;
+    margin-top:-8%;
+    z-index: 10;
+}
+
+.new_video hr{
+    position: relative;
+    margin-top: 20%;
+    size:100px;
+}
+.blue_icons{
+    color: #260970;
+}
+
+.blue_icons p #newvideo_info{
+    font-size: smaller;
+}
+
+.te_{
+    background-color: #260970;
+}
+
+.te_ a{
+    text-decoration: none;
+}
+
+.live h2{
+    display:inline
+}
+
+.give_icons{
+   color: #260970;
+   margin-left: 8%;
+}
+
+#ussd{
+    height:300px !important;
+}
+
+.intro_new{
+    height:200px;
+}
+
+#honoured{
+    color: #260970;
+}
+
+.intro_new span h5{
+    display:inline;
+    font-size: xx-large;
+}
+
+.intro_new span{
+    font-size: xx-large;
+}
+
+.church_icon{
+    color:#260970;
+    font-size: x-large;
+}
+
+.tall{
+    font-size: larger;
+}
+
+
+
+.intro_header{
+    height:480px;
+    background-image: url("../../images/sunday_service.JPG");
+    background-size:contain;
+    background-position: center;
+}
+
+div{
+    border: 0px solid brown;
+}
+
+#intro_header{
+    height:480px;
+    background-image: url("../../images/faith.JPG");
+    background-size:cover;
+    background-position: center;
+}
+
+.display{
+    color: #260970;
+}
+
+.bluebg{
+    background-color: #260970;
+}
+
+
+.blue{
+    color: #260970;
+}
+
+
+#foundation{
+    height: 480px;
+    background-image: linear-gradient(rgba(0,0,0,0.527),rgba(0,0,0,0.9)), url(../../images/foundation3.jpeg);
+    background-size:contain;
+    background-position: center;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 700px){
+    .mediabox{
+        margin-top: 40%;
+    }
+
+    .head{
+        margin-top: -3% !important;
+      }
+
+      .more{
+        position: relative;
+        top: -1.5%;
+        font-size: smaller;
+      }
+
+      .home_video video{
+        height: 26vh;
+        position: relative;
+        margin-top: -17%;
+        
+      }
+
+      .new_video{
+        width:38%;
+        height:30vh;
+        margin-top:-6%;
+        position: relative;
+        right:20%;
+      }
+
+      .new_video h2, h4{
+        font-size: smaller;
+      }
+
+      h4{
+        font-weight: 700;
+      }
+
+      #msg{
+        margin-top: 13%;
+      }
+      .te_timer{
+        width:80%;
+        margin:auto;
+      }
+}

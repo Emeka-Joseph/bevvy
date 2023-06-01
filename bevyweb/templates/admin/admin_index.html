@@ -1,0 +1,56 @@
+{% extends 'users/index.html'  %}
+
+{% block carousel %}  {% endblock %}
+{% block about %} {%  endblock %}
+{% block whatwedo %}  {%  endblock %}
+{% block gallery %} 
+<section>
+    <div class="container">
+      <div class="custom_heading-container">
+        <h2>
+          Gallery
+        </h2>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 gallery">
+            <img src="{{url_for('static',filename='images/images/bevvy1.JPG')}}" width="100%" alt="" />
+        </div>
+
+        <div class="col-md-3 gallery">
+          <img src="{{url_for('static',filename='images/images/bevvy2.JPG')}}" width="100%" alt="" />
+        </div>
+
+        <div class="col-md-3 gallery">
+            <img src="{{url_for('static',filename='images/images/bevvy3.JPG')}}" width="100%" alt="" />
+        </div>
+
+        <div class="col-md-3 gallery">
+            <img src="{{url_for('static',filename='images/images/bevvy4.JPG')}}" width="100%" alt="" />
+        </div>
+
+        <div class="col-md-3 gallery">
+            <img src="{{url_for('static',filename='images/images/bevvy5.JPG')}}" width="100%" alt="" />
+        </div>
+
+        <div class="col-md-3 gallery">
+            <img src="{{url_for('static',filename='images/images/bevvy6.JPG')}}" width="100%" alt="" />
+        </div>
+
+        <div class="col-md-3 gallery">
+            <img src="{{url_for('static',filename='images/images/slide2.JPG')}}" width="100%" alt="" />
+        </div>
+
+        <div class="col-md-3 gallery">
+            <img src="{{url_for('static',filename='images/images/bevvy9.JPG')}}" width="100%" alt="" />
+        </div>
+
+        <div class="col-md-12 gallery">
+           <a href="">Click to View More...</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+{%  endblock %}

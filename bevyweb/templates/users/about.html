@@ -1,0 +1,125 @@
+{% extends 'users/index.html'  %}
+
+{% block carousel %}  {% endblock %}
+{% block about %} 
+<section class="about_section layout_padding my-5" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="detail-box">
+          <div class="custom_heading-container" id="about_bevy">
+            <h2>
+              About Us
+            </h2>
+          </div>
+
+          <p style="text-align:justify" class="mx-2">
+            Just like our slogan implies, "OUR BUSINESS, YOUR ENTERTAINMENT. We are known for creative and technical excellence, delivered in a friendly and professional manner. Dedicated to telling brand stories through engaging, emotive and effective video content, we can act as the creative spark or the trusted guardian of an idea. While we do business we still try to get you relieved through our comedy skits 
+            
+          </p>
+          
+        </div>
+      </div>
+      <div class="col-md-7" style="border: 0px solid black; display: flex;  justify-content: center ;">
+          
+        <img src="{{url_for('static',filename='images/bevyimg6.JPG')}}" width="60%" alt="" style="border-radius: 50%;"/>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="do_section layout_padding-bottom" id="service">
+  <div class="container">
+    <div class="custom_heading-container">
+      <h2>
+        What we are
+      </h2>
+    </div>
+    <div class="row">
+      <div class="col-md-7 offset-md-3 col-sm-6">
+        <div class="content-box" style="background-color: rgb(236, 231, 231); box-shadow:30px;">
+          <div class="detail-box">
+            <h4 style="color: black; font-family: 'Exo 2', sans-serif; text-align:justify" class="mx-2"> 
+              We are a team of smart, creative and highly professional young people who are working together to consistently provide individuals and organizations with the best possible solutions to their photography & videography needs. Our focus is to continuously deliver amazing and memorable experiences to our clients as we provide cutting edge media services /contents. 
+
+            </h4>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="content-box">
+          <h2 class="title" >Our Vision</h2>
+          <div class="img-box">
+            <img src="{{url_for('static',filename='images/vision.png')}}" alt="" />
+          </div>
+          <div class="detail-box content-box bg-red " >
+            <h5 style="font-family: 'Exo 2', sans-serif;" class="my-5"> 
+              To be a leading one-stop photography company in Nigeria in Nigeria by providing world-class media services of premium quality.
+
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="content-box">
+          <h2 class="title">Our Core Values</h2>
+          <div class="img-box">
+            <img src="{{url_for('static',filename='images/values.png')}}" alt="" />
+          </div>
+          <div class="detail-box content-box bg-red">
+            <h5 style="font-family: 'Exo 2', sans-serif;" class="my-4"> 
+              Our client’s satisfaction is most paramount and at the centre of our service delivery. Our core values include; integrity, excellence, professionalism, creativity, hard work and timely delivery.
+
+
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="content-box">
+          <h2 class="title">Our Mission</h2>
+          <div class="img-box">
+            <img src="{{url_for('static',filename='images/mission.png')}}" alt="" />
+          </div>
+          <div class="detail-box content-box bg-red">
+            <h5 style="font-family: 'Exo 2', sans-serif;" class="mt-4 mb-5"> 
+              We have a commitment to consistently providing our clients with cutting-edge media services of premium quality at prices that represent value for all stakeholders.
+
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row d-flex justify-content-center" style="background-color: rgb(236, 231, 231); box-shadow:30px;">
+    <div class="col-md-3 d-flex justify-content-center my-3">
+      <h2 class="title"> Our Services</h2>
+    </div>
+    <div class="col-md-10 d-flex justify-content-center">
+      <ul style="font-family: 'Exo 2', sans-serif;" class="my-2">
+        <h5> Our Services Includes:</h5>
+        <li>Photography (Studio and out-door)</li>
+        <li>Events coverage (Photo + Video)</li>
+        <li>Live-streaming of events</li>
+        <li>Video editing and graphics</li>
+        <li>Audio-visual adverts/content creation</li>
+        <li>Film making</li>
+        <li>Training services</li>
+        <li>Media consultancy</li>
+        
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+
+{%  endblock %}
+{% block whatwedo %}  {%  endblock %}
+{% block gallery %}  {%  endblock %}
