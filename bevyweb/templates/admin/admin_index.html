@@ -3,54 +3,99 @@
 {% block carousel %}  {% endblock %}
 {% block about %} {%  endblock %}
 {% block whatwedo %}  {%  endblock %}
-{% block gallery %} 
-<section>
-    <div class="container">
-      <div class="custom_heading-container">
-        <h2>
-          Gallery
-        </h2>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3 gallery">
-            <img src="{{url_for('static',filename='images/images/bevvy1.JPG')}}" width="100%" alt="" />
-        </div>
-
-        <div class="col-md-3 gallery">
-          <img src="{{url_for('static',filename='images/images/bevvy2.JPG')}}" width="100%" alt="" />
-        </div>
-
-        <div class="col-md-3 gallery">
-            <img src="{{url_for('static',filename='images/images/bevvy3.JPG')}}" width="100%" alt="" />
-        </div>
-
-        <div class="col-md-3 gallery">
-            <img src="{{url_for('static',filename='images/images/bevvy4.JPG')}}" width="100%" alt="" />
-        </div>
-
-        <div class="col-md-3 gallery">
-            <img src="{{url_for('static',filename='images/images/bevvy5.JPG')}}" width="100%" alt="" />
-        </div>
-
-        <div class="col-md-3 gallery">
-            <img src="{{url_for('static',filename='images/images/bevvy6.JPG')}}" width="100%" alt="" />
-        </div>
-
-        <div class="col-md-3 gallery">
-            <img src="{{url_for('static',filename='images/images/slide2.JPG')}}" width="100%" alt="" />
-        </div>
-
-        <div class="col-md-3 gallery">
-            <img src="{{url_for('static',filename='images/images/bevvy9.JPG')}}" width="100%" alt="" />
-        </div>
-
-        <div class="col-md-12 gallery">
-           <a href="">Click to View More...</a>
-        </div>
+{% block gallery %}  
+<div class="d-flex" id="wrapper" >
         
+  <div class="bg-white" id="sidebar-wrapper">
+      <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom" style="color:  rgb(3, 3, 93);">
+          <img src="images/42c92cb8-fc29-42c7-b1e2-38971e84f946-removebg-preview.png" alt="">
+          <p>BEVVY STUDIOS</p> 
+
       </div>
-    </div>
-  </section>
+
+      {% include 'admin/menu.html' %}
+  </div>
+
+
+ 
+  <div id="page-content-wrapper" >
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+          <div class="d-flex align-items-center">
+              <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+              <h2 class="fs-2 m-0" style="color: #ff0000;">  Dashboards</h2>
+          </div>
+      </nav>
+<div class="row" style="display: flex; justify-content: center">
+  <div class="col-md-10 sm-12 mb-3">
+
+
+    {% with c=get_flashed_messages() %}
+        {% if c %}
+              {% for msg in c %}
+                <div class="alert alert-info col-md-12">{{ msg }}</div>
+              {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+      <h4 class="my-5" style="color: white;">The List below contains all Booked Sessions </h4>    
+          <table class="table  mt-5" style="color: white; display: inline;">
+
+            <thead>
+                  <tr>
+                      <th>S/N </th>
+                      <th>Name</th>
+                      <th>Phone No</th> 
+                      <th>Email Address</th>
+                      <th>Photo Shoot</th>
+                      <th>Space</th>
+                      <th>Editing</th>
+                      <th>Booked Date</th>
+                      <th>Amount Deposited</th>
+                      <th>Naration</th>
+                  </tr>
+            </thead>
+              <tbody>
+                 
+                  {% for i in booked_session %}
+
+                  <tr >
+                      <td class="cat"> {{ loop.index }}</td>
+                      <td class="cat"> {{i.name}}  </td>
+                      <td class="cat"> {{i.phone}}  </td>
+                      <td class="cat"> {{i.email}}  </td>
+                      <td class="cat"> {{i.photo_shoot}}</td>
+                      <td class="cat"> {{i.space}}  </td>
+                      <td class="cat"> {{i.editing}}  </td>
+                      <td class="cat"> {{i.date}}  </td>
+                      <td class="cat"> {{i.amount_paid}}  </td>
+                      <td class="cat"> {{i.naration}}  </td>
+                  </tr>
+                  {% endfor %}
+
+              </tbody>
+          </table>
+
+  </div>
+</div> 
+      </div>
+
+      
+  </div>
+</div>
 {%  endblock %}
+
+{% block contact %} {% endblock %}
+
+{% block footer %}
+
+<script src=" {{url_for('static',filename='bootstrap/js/bootstrap.bundle.min.js')}} "></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script>
+
+    {% endblock %}

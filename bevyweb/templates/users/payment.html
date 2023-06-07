@@ -1,0 +1,49 @@
+{% extends 'users/index.html'  %}
+
+{% block carousel %}  {% endblock %}
+{% block about %} {%  endblock %}
+{% block whatwedo %} 
+<section style="display: flex; justify-content: center;">
+    
+    <div class="container-fluid">
+      <div class="row" style="display: flex; justify-content: center;">
+          <div class="col-md-5 mt-5">
+              <h5 style="color: red;"><strong>Payment Details</strong></h5>
+              <p> 
+                <strong>Bank Name:</strong> Zenith Bank <br>
+                <strong>Account Number:</strong> 1234567890  <br>
+                <strong>Account Name:</strong> Bevvy Studios   <br>
+              </p> 
+
+              <p>Upload your Proof of Payment (POP) below</p>                     
+                          <div>      
+                              <form action="" method="post" enctype="multipart/form-data"> 
+
+                                <div>
+                                    <input type="text" name="name" class="form-control" placeholder="Your name should tally with the one you suuplied in the form">
+                                </div>
+
+                                    <div>
+                                        <input type="number" name="amount" class="form-control" placeholder="(N)Amount paid">
+                                    </div>
+
+                                    <div>                                      
+                                      <input type="file" name="pop" class="form-control" placeholder="Proof of Payment">
+                                      </div>
+
+                                    <div> 
+                                      <textarea name="details" id="details" cols="25" rows="2" placeholder="Brief narration" class="form-control"></textarea>
+                                    </div>
+                                        <button class="btn btn-success btn-sm mt-3 form-control" >Upload a POP</button>
+                                        <a href="/dashboard" class="btn btn-danger btn-sm mt-3 form-control" >Cancel</a>
+                                    </div>
+                              </form>
+                  </div>
+          </div>
+      </div>
+    </div>
+  </section> {%  endblock %}
+
+{% block gallery %} 
+ {%  endblock %}
+ {% block contact %} {% endblock %}

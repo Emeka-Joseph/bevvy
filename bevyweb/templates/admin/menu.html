@@ -1,0 +1,20 @@
+<div class="list-group list-group-flush my-3">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active">
+                    <i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+
+                <a href=" {{url_for('admin_home')}} "  class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-solid fa-file"></i> View Sessions</a>
+ 
+                <a href=" {{url_for('admin_messages')}} " class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-sharp fa-solid fa-eye"></i> View Messages</a>
+
+                
+                <a href=" {{url_for('album')}} " class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-sharp fa-solid fa-eye"></i> Manage Gallery</a>
+
+                
+
+                <a href=" {{url_for('admin_logout')}} " class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+                    Hi, {{session.get('admin')}}
+                    <i class="fa-sharp fa-solid fa-power-off"></i> Logout</a>
+            </div>

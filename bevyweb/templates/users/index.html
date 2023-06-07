@@ -31,6 +31,11 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,700;1,400&family=Stick+No+Bills:wght@700;800&display=swap" rel="stylesheet">
 
+
+<link rel="stylesheet" type="text/css" href=" {{url_for('static',filename='bootstrap/css/bootstrap.css')}}">
+	<link rel="stylesheet" type="text/css" href=" {{url_for('static',filename='fontawesome/css/all.min.css')}} ">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/index.css')}}">
+
   <!-- Custom styles for this template -->
   <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" />
   <!-- responsive style -->
@@ -63,7 +68,7 @@
                 <a class="nav-link" href="{{url_for('gallery')}}">Gallery</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#sessoin">Book a Session </a>
+                <a class="nav-link" href="/book_session">Book a Session </a>
               </li>
   
               <li class="nav-item">
@@ -122,7 +127,7 @@
                 
                 <div class="col-md-11" style="border: 0px solid red;">
                   <div class="img-box">
-                    <img src="{{url_for('static',filename='images/images/slide1.JPG')}}"  width="10%" height="480"  alt=""/>
+                    <img src="{{url_for('static',filename='images/images/slide1.JPG')}}"  width="90%" height="500"  alt=""/>
                   </div>
                 </div>
               </div>
@@ -131,22 +136,23 @@
               <div class="row d-flex justify-content-center">
                 <div class="col-md-11" style="border: 0px solid red;">
                   <div class="img-box">
-                    <img src="{{url_for('static',filename='images/images/slide4.JPG')}}" width="90%" height="480" alt="" />
+                    <img src="{{url_for('static',filename='images/images/slide4.JPG')}}" width="90%" height="500" alt="" />
                   </div>
                 </div>
               </div>
             </div>
-
+<!-- 
             <div class="carousel-item">
               <div class="row d-flex justify-content-center">
                 <div class="col-md-11" style="border: 0px solid red;">
+                  
                   <div class="img-box">
-                    <img src="{{url_for('static',filename='images/images/bevvy12.JPG')}}" width="90%" height="480"  alt=""/>
+                    <img src="{{url_for('static',filename='images/images/bevyimg4.JPG')}}" width="90%" height="500"  alt=""/>
                   </div>
                 </div>
               </div>
             </div>
-
+-->
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="sr-only">Previous</span>
@@ -211,7 +217,7 @@
               </div>
               <div class="detail-box">
                 <h4> 
-                  <strong>Indoor Photography</strong>
+                  <strong>Indoor <br> Photography</strong>
                 </h4>
                 
               </div>
@@ -315,7 +321,7 @@
     <div class="container">
       <div class="custom_heading-container">
         <h2>
-          Gallery
+          Portfolio
         </h2>
       </div>
     </div>
@@ -376,35 +382,42 @@
 
   {% block contact %}
 
+  
+
   <section class="contact_section mt-5" id="contact">
     <div class="container-fluid">
       <div class="row" style="background-color: #000000;">
         <div class="col-md-12 d-flex justify-content-center"><h2 class="custom_heading " style="height: 10px;">Contact Us</h2></div>
         <div class="col-lg-4 offset-lg-1 col-md-5" >
-          <form action="#">
+          {% with c=get_flashed_messages() %}
+            {% if c %}
+              {% for msg in c %}
+                <div class="alert alert-info col-md-12">{{ msg }}</div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          <form action="{{ url_for('messages')}}" method="post">
             <div>
-              <input type="text" placeholder="Name"/>
+              <input type="text" name="name" placeholder="Name"/>
             </div>
             <div>
-              <input type="email" placeholder="Email"/>
+              <input type="email" name="mail" placeholder="Email"/>
             </div>
             <div>
-              <input type="text" placeholder="Pone Number"/>
+              <input type="text" name="phone" placeholder="Pone Number"/>
             </div>
             <div>
-              <input type="text" class="message-box" placeholder="Message"/>
+              <input type="text" class="message-box" name="message" placeholder="Message"/>
             </div>
             <div class="d-flex justify-content-center  mt-2">
-              <button>
-                SEND
-              </button>
+              <button type="submit"> SEND MESSAGE  </button>
             </div>
           </form>
         </div>
 
         <div class="col-md-6 px-0">
           <div class="img-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4882559431026!2d7.531784109971617!3d6.459653923876272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a527fbf469c9%3A0xe820440db9e90a9e!2sBEVVY%20STUDIOS!5e0!3m2!1sen!2sng!4v1685430299553!5m2!1sen!2sng" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" target="_blank"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4882559431026!2d7.531784109971617!3d6.459653923876272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a527fbf469c9%3A0xe820440db9e90a9e!2sBEVVY%20STUDIOS!5e0!3m2!1sen!2sng!4v1685430299553!5m2!1sen!2sng" width="95%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" target="_blank"></iframe>
           </div>
           <div class="d-flex justify-content-center">
                 <a href="https://goo.gl/maps/1wrCcSCeQBdKtVYh6?coh=178572&entry=tt" target="_blank" class="btn btn-danger btn-sm"> Click to Navigate</a>
@@ -420,26 +433,33 @@
   {% block footer %}
 
   <!-- info section -->
-  <section class="info_section layout_padding-top layout_padding2-bottom">
+  <section class="info_section">
     <div class="container">
       <div class="row d-flex justify-content-center">
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-5 col-lg-3 mt-3">
           <div class="info_links pl-lg-5">
             <h5>Quick links</h5>
             <ul>
               <li class="active">
                 <a href="#index">
-                  Home
+                  Home 
                 </a>
               </li>
               <li>
-                <a href="#about">
+                <a href="{{url_for('about')}}">
                   About
                 </a>
               </li>
               <li>
-                <a class="" href="#gallery">Services</a>
+                <a class="" href="{{url_for('gallery')}}">Gallery</a>
               </li>
+
+              <li>
+                <a href="{{url_for('book_session')}}">
+                  Book a Session
+                </a>
+              </li>
+
               <li>
                 <a href="#contact">
                   Contact Us
@@ -448,7 +468,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-5 mt-3">
           <div class="info_contact">
 
             <div>
@@ -474,7 +494,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3 mt-3">
           <div class="info_social">
             <h4>
               Social Link

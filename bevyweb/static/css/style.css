@@ -5,9 +5,21 @@ body {
 }
 
 div{
-  border: 0px solid blue;
+  border: 0px solid brown;
+}
+ 
+.outline{
+  border: 0px solid red;
+  margin-top: 5px;
+  background-color: red;
+  min-height: fit-content;
 }
 
+.session_div{
+  background-color: rgb(255, 0, 0);
+  border-radius: 0%;
+  margin-bottom: 0px;
+}
 .title{
   color: red;
   font-family: 'Stick No Bills', sans-serif;
@@ -204,7 +216,7 @@ a:focus {
 .slider_section .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center; 
 }
 
 .slider_section .detail-box h1 {
@@ -622,7 +634,7 @@ a:focus {
 
 .info_links ul {
   padding-left: 15px;
-}
+} 
 
 .info_links ul .active::before {
   background-color: #0caa7d;
